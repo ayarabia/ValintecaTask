@@ -1,0 +1,1 @@
+document.getElementById("userEmail").innerHTML=localStorage.getItem("email")

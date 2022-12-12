@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="register">
+        <div class="image"><img src="./imags/Image Placeholder (1).png" alt="" /></div>
+        <div class="info">
+          <h1>Create Account</h1>
+          <p>Go ahead and sign up, let everyone know how awesome you are!</p>
+          <form action="" >
+            <div>
+              <div class="input">
+                <div class="icon"><i class="far fa-user"></i></div>
+                <div class="data">
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    id="name"
+                    oninput="validation('name', /^[^0-9][a-z0-9]*[^0-9]{4,15}$/i,'Username must consist of 5 to 15 characters, only letters and numbers are allowed, with no numbers at the beginning or the end',0)"
+                  />
+                </div>
+              </div>
+              <span class="error" ></span
+              >
+            </div>
+            <div>
+              <div class="input">
+                <div class="icon"><i class="far fa-envelope"></i></div>
+                <div class="data">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    id="email"
+                    oninput="validation('email', /^([a-z0-9_\.]{3,15})@([a-z]{4,7})\.([a-z]{2,5})/,'Email must be in a valid format',1)"
+                  />
+                </div>
+              </div>
+              <span class="error"></span>
+            </div>
+            <div>
+              <div class="input">
+                <div class="icon"><i class="fa fa-lock"></i></div>
+                <div class="data">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    id="password"
+                    oninput="validation('password',  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,'Password must be at least 8 characters',2)"
+                  />
+                </div>
+              </div>
+              <span class="error"></span>
+            </div>
+            <div>
+              <div class="input">
+                <div class="icon"><i class="fa fa-lock"></i></div>
+                <div class="data">
+                  <input
+                    type="password"
+                    placeholder="Confirm password"
+                    id="confirmPassword"
+                    oninput="validation('confirmPassword', /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,'Passwords does not match',3)"
+                  />
+                </div>
+              </div>
+              <span class="error" ></span>
+              <span id="confirm"></span>
+            </div>
+          </form>
+          <!-- <a href="./login.html">Create Account</a> -->
+          <input
+            type="submit"
+            value="Create Account"
+        
+            class="submit"
+            id="submit"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
