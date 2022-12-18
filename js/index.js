@@ -25,13 +25,10 @@ function matchPassword() {
 submit.addEventListener("click", function (e) {
   e.preventDefault();
   counter = 0;
-  // nameValid()
-  // emailValid()
-  // passValid()
   validation(
     "name",/^[^0-9][a-z0-9]*[^0-9]{4,15}$/i,"Username must consist of 5 to 15 characters, only letters and numbers are allowed, with no numbers at the beginning or the end",0 );
   validation(
-    "email",/^([a-z0-9_\.]{3,15})@([a-z]{4,7})\.([a-z]{2,5})/,"Email must be in a valid format", 1);
+    "email",/^([a-z0-9_\.]{3,15})@([a-z]{4,7})\.([a-z]{2,5})/i,"Email must be in a valid format", 1);
   validation("password",/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,"Password must be at least 8 characters",2  );
   validation("confirmPassword",/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,"Password must be at least 8 characters",3
   );
