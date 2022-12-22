@@ -1,24 +1,24 @@
-var submit = document.getElementById("submit");
-var confirm = document.getElementById("confirm");
-var notvalid = document.getElementsByClassName("error");
+const submit = document.getElementById("submit");
+const confirm = document.getElementById("confirm");
+const notvalid = document.getElementsByClassName("error");
+var counter = 0;
 function validation(id, pattern, message, num) {
-  var element = document.getElementById(id);
+  const element = document.getElementById(id);
    if (!element.value.match(pattern)) {
-    notvalid[num].innerHTML = message;
+    notvalid[num].textContent = message;
     notvalid[num].style.color = "red";
     counter++;
   } else {
-    notvalid[num].innerHTML = "";
+    notvalid[num].textContent = "";
   }
 }
-var counter = 0;
 function matchPassword() {
   let password = document.getElementById("password");
   let confirmPassword = document.getElementById("confirmPassword");
   if (password.value === confirmPassword.value) {
-    confirm.innerHTML = "";
+    confirm.textContent = "";
   } else {
-    confirm.innerHTML = "Passwords did not match";
+    confirm.textContent = "Passwords did not match";
   }
 }
 
